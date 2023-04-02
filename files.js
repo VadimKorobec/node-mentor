@@ -23,6 +23,10 @@ const createFile = (fileName, content) => {
       chalk.red(`Application doesn't support files with${extension} extension `)
     );
   }
+
+  const filePatch = path.join(__dirname + "/files", fileName);
+  fs.writeFile(filePatch, content, "utf-8");
+  console.log(chalk.blue("file create succssesful"));
 };
 
 module.exports = { createFile };
