@@ -1,6 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 const chalk = require("chalk");
+
 const dataValidate = require("./helpers/data-validation");
 const checkExtension = require("./helpers/check-extension");
 
@@ -24,6 +25,4 @@ const createFile = (fileName, content) => {
   }
 };
 
-module.exports = {
-  createFile,
-};
+module.exports = { createFile };
